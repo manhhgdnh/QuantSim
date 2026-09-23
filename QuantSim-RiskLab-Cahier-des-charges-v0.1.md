@@ -3,7 +3,7 @@
 **Plateforme Java client-serveur de simulation stochastique et d’analyse du risque financier**  
 Module : Programmation Objet Avancée en Java  
 Version : 0.1 — proposition de spécification, 23 septembre 2026  
-Auteurs et échéance : **À COMPLÉTER**
+Auteurs et échéance : Manh Hung et Minh Duy
 
 Ce document définit le comportement attendu du prototype et les conditions permettant de vérifier sa conformité. Il ne constitue pas un bilan d’implémentation. Aucun code ni résultat de test n’a été examiné à ce stade : toutes les exigences sont **prévues, non vérifiées**.
 
@@ -101,8 +101,8 @@ Les mesures de risque sont calculées sur les pertes L, en unités monétaires, 
 Pour éviter les ambiguïtés sur les petits échantillons, la convention empirique suivante est proposée. Soient les pertes triées L₍₁₎ ≤ … ≤ L₍N₎, α ∈ {0,95 ; 0,99} et k = ⌈Nα⌉ :
 
 $$
-\operatorname{VaR}_\alpha=L_{(k)},\qquad
-\operatorname{ES}_\alpha=
+VaR_\alpha=L_{(k)},\qquad
+ES_\alpha=
 \frac{(k-N\alpha)L_{(k)}+\sum_{j=k+1}^{N}L_{(j)}}{N(1-\alpha)}.
 $$
 
