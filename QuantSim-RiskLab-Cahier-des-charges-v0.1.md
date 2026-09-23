@@ -68,10 +68,10 @@ Ces choix précisent le périmètre initial ; ils ne décrivent pas une impléme
 
 Le modèle retenu est :
 
-\[
+$$
 dS_i(t)=\mu_i S_i(t)dt+\sigma_i S_i(t)dW_i(t),
 \qquad d\langle W_i,W_j\rangle_t=\rho_{ij}dt.
-\]
+$$
 
 La méthode de référence proposée pour le MVP est la transition exacte du GBM sur chaque pas :
 
