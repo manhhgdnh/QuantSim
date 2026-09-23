@@ -75,10 +75,10 @@ $$
 
 La méthode de référence proposée pour le MVP est la transition exacte du GBM sur chaque pas :
 
-\[
+$$
 S_i(t+\Delta t)=S_i(t)\exp\left[(\mu_i-\sigma_i^2/2)\Delta t+\sigma_i\sqrt{\Delta t}Z_i\right],
 \qquad Z\sim\mathcal N(0,R).
-\]
+$$
 
 Les vecteurs gaussiens sont indépendants entre pas et entre scénarios. Pour la construction par Cholesky, R = CCᵀ et Z = Cε avec ε de composantes normales standard indépendantes.
 
@@ -90,21 +90,21 @@ La comparaison avec Euler–Maruyama est classée SHOULD. Il s’agit d’une au
 
 Pour un portefeuille de d actions et N scénarios :
 
-\[
+$$
 V_0=\sum_{i=1}^{d}q_iS_i(0),\qquad
 V_T^{(m)}=\sum_{i=1}^{d}q_iS_i^{(m)}(T),\qquad
 PnL_m=V_T^{(m)}-V_0,\qquad L_m=-PnL_m.
-\]
+$$
 
 Les mesures de risque sont calculées sur les pertes L, en unités monétaires, à l’horizon T. Une perte positive correspond à une diminution de valeur. Les résultats ne sont pas tronqués artificiellement à zéro.
 
 Pour éviter les ambiguïtés sur les petits échantillons, la convention empirique suivante est proposée. Soient les pertes triées L₍₁₎ ≤ … ≤ L₍N₎, α ∈ {0,95 ; 0,99} et k = ⌈Nα⌉ :
 
-\[
+$$
 \operatorname{VaR}_\alpha=L_{(k)},\qquad
 \operatorname{ES}_\alpha=
 \frac{(k-N\alpha)L_{(k)}+\sum_{j=k+1}^{N}L_{(j)}}{N(1-\alpha)}.
-\]
+$$
 
 Cette ES correspond à la moyenne de la fraction supérieure 1−α de la distribution empirique, avec pondération de l’observation frontière lorsque nécessaire. Elle évite l’ambiguïté d’une simple moyenne des pertes supérieures ou égales à la VaR en présence d’ex æquo.
 
